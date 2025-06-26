@@ -1,0 +1,40 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Weather Trends for {{ state }}, {{ country }}</h1>
+
+<label for="year-select">Select Year:</label>
+<select id="year-select" onchange="updateGraphs()">
+  {% for entry in graphs_by_year %}
+    <option value="{{ entry.year }}" {% if entry.year == default_year %}selected{% endif %}>{{ entry.year }}</option>
+  {% endfor %}
+</select>
+
+<div>
+  {% for entry in graphs_by_year %}
+    <div class="year-graph" id="year-{{ entry.year }}" style="{% if entry.year != default_year %}display:none;{% endif %}">
+      <h2>{{ entry.year }}</h2>
+      <img src="{% static entry.precip %}" alt="Temperature {{ entry.year }}">
+    </div>
+  {% endfor %}
+</div>
+
+
+<a href="{% url 'dashboard' %}">Search again</a>
+
+
+{% endblock %}
+
+{% block extra_js %}
+function updateGraphs() {
+  var selectedYear = document.getElementById("year-select").value;
+  var all = document.querySelectorAll(".year-graph");
+  all.forEach(el => el.style.display = 'none');
+
+  var active = document.getElementById("year-" + selectedYear);
+  if (active) active.style.display = 'block';
+}
+
+{% endblock %}

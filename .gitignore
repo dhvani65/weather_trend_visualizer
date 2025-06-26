@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Environment
+.env
+venv/
+env/
+*.log
+
+# Django
+*.pyc
+*.pyo
+*.pyd
+db.sqlite3
+/staticfiles/
+/media/
+
+# VSCode / PyCharm
+.vscode/
+.idea/
+*.swp
+
+# Virtual environments
+venv/
+env/
+weather_env/
