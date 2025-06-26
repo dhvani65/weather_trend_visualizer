@@ -5,10 +5,13 @@ Django project to visualize historical weather data by state and country using O
 
 ## Features:
 - State + Country validation using OpenCage
-- Graphs of temperature, precipitation, and humidity using matplotlib
+- Graph of temperature using matplotlib
 - Monthly & yearly views
 
 ## Setup:
 ```bash
 pip install -r requirements.txt
 python manage.py runserver
+
+## Example video
+https://drive.google.com/file/d/1lxMOAZVxW8MT71omCop9UjsJKE2u82g9/view?usp=sharing
