@@ -5,6 +5,7 @@ charset-normalizer==3.4.2
 cycler==0.12.1
 Django==4.2.23
 fonttools==4.57.0
+setuptools==80.9.0
 idna==3.10
 importlib_resources==6.4.5
 kiwisolver==1.4.7
