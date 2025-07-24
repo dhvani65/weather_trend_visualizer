@@ -2,7 +2,6 @@ asgiref==3.8.1
 backports.zoneinfo==0.2.1
 certifi==2025.6.15
 charset-normalizer==3.4.2
-contourpy==1.1.1
 cycler==0.12.1
 Django==4.2.23
 fonttools==4.57.0
